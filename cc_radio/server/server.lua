@@ -34,7 +34,7 @@ RegisterCommand('radio',function(source,item)
                 local source = xPlayers[i]
                 TriggerClientEvent('radio:use', source)   
               else
-                TriggerClientEvent('notification',source,'You dont have radio',1)                                                
+               TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You dont have radio', length = 2500)                                          
              end
          end
      end
